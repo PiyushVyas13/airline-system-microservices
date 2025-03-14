@@ -67,7 +67,7 @@ Each service is independently deployable and has its own:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/airline-management-system.git
+git clone https://github.com/PiyushVyas13/airline-management-system.git
 cd airline-management-system
 ```
 
