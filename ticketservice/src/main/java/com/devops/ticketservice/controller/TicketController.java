@@ -5,9 +5,12 @@ import com.devops.ticketservice.dto.TicketDto;
 import com.devops.ticketservice.service.TicketService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.net.URI;
 
 @RestController
 @RequiredArgsConstructor
@@ -22,7 +25,8 @@ public class TicketController {
 
     @PostMapping("/")
     public ResponseEntity<TicketDto> createTicket(@Valid @RequestBody CreateTicketRequest request) {
-        return ResponseEntity.ok(ticketService.createTicket(request));
+        TicketDto newTicket = ticketService.createTicket(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(newTicket);
     }
 
     @DeleteMapping("/{id}")

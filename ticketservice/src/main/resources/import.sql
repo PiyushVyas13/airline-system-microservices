@@ -8,3 +8,5 @@ INSERT INTO TICKETS (id, user_id, flight_id, flight_schedule_id, passenger_name,
 
 -- Insert a cancelled ticket
 INSERT INTO TICKETS (id, user_id, flight_id, flight_schedule_id, passenger_name, seat_number, price, status, booking_time) VALUES (5, 5, 4, 6, 'Charlie Davis', 'E18', 780.25, 'CANCELLED', '2025-03-12T16:40:00');
+
+ALTER TABLE TICKETS ALTER COLUMN id RESTART WITH 6;
