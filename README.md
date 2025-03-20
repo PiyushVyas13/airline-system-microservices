@@ -15,7 +15,7 @@ A modern microservice-based airline management system built with Spring Boot. Th
 - [API Documentation](#api-documentation)
 - [Data Models](#data-models)
 - [Validation](#validation)
-
+- [Screenshots](#screenshots)
 
 ## Features
 
@@ -27,22 +27,20 @@ A modern microservice-based airline management system built with Spring Boot. Th
 
 ## Project Structure
 
-The system follows a microservice architecture with three main services:
+The system follows a microservice architecture with the following package structure:
 
 ```
-airline-management-system/
-├── flight-service/             # Flight management service
-├── user-service/               # User management service
-└── ticket-service/             # Ticket booking service
+com.devops.xservice/
+├── controller/             # REST controllers for handling HTTP requests
+├── dto/                    # Data Transfer Objects for API requests and responses
+├── exception/              # Custom exceptions and global exception handling
+├── mapper/                 # Object mappers for converting between entities and DTOs
+├── model/                  # Domain models and entities
+├── repository/             # Data access interfaces for database operations
+├── service/                # Business logic implementation
+├── validation/             # Custom validation rules and constraints
+└── XServiceApplication.java  # Main application entry point
 ```
-
-Each service is independently deployable and has its own:
-- Database (H2 in-memory)
-- REST controllers
-- Business logic
-- Data access layer
-- Validation rules
-- Error handling
 
 ## Technologies Used
 
@@ -127,10 +125,27 @@ Base URL: `http://localhost:8080/tickets`
 
 - **Ticket:** Represents a flight booking for a user
 
-## Validation
+## Screenshots
 
-The system uses Jakarta Validation with custom constraints:
+### Project Structure
+[Insert screenshot of project directory structure]
 
-- **@UniqueFlightNumber:** Ensures flight numbers are unique
-- **@ValidDateRange:** Validates arrival time is after departure time
-- **@UniqueEmail:** Ensures email addresses are unique
+### API Testing
+
+#### Flight Service Endpoints
+[Insert Postman screenshot of flight creation]
+[Insert Postman screenshot of retrieving flights]
+[Insert Postman screenshot of flight schedules]
+
+#### User Service Endpoints
+[Insert Postman screenshot of user creation]
+[Insert Postman screenshot of user retrieval]
+
+#### Ticket Service Endpoints
+[Insert Postman screenshot of ticket booking]
+[Insert Postman screenshot of ticket retrieval]
+[Insert Postman screenshot of ticket cancellation]
+
+### Error Handling Examples
+[Insert Postman screenshot of validation error response]
+[Insert Postman screenshot of resource not found error]
