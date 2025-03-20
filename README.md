@@ -67,8 +67,8 @@ Each service is independently deployable and has its own:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/airline-management-system.git
-cd airline-management-system
+git clone https://github.com/PiyushVyas13/airline-system-microservices.git
+cd airline-system-microservices
 ```
 
 2. Build the project:
