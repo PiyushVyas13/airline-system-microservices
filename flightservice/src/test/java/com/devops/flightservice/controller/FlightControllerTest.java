@@ -65,7 +65,7 @@ class FlightControllerTest {
                 .flightNumber("FL123")
                 .origin("New York")
                 .destination("London")
-                .capacity(200)
+                .capacity(500)
                 .availableSeats(150)
                 .price(500.0)
                 .build();
